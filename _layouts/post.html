@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <h1>{{ page.title }}</h1>
 <span class="time">{{ page.date | date_to_string }}</span>
 {% if page.categories %}
@@ -50,7 +51,8 @@ layout: default
   {% endif %}
 </div>
 
-
+<!--
+去除评论系统
 <div class="disqus-comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -69,3 +71,4 @@ layout: default
     /* ]]> */
     </script>
 </div>
+-->
