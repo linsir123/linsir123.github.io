@@ -27,4 +27,4 @@ redcarpet:
     - lax_spacing
     - with_toc_data
 
-highlighter: pygments
+highlighter: rouge

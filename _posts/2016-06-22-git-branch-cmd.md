@@ -1,4 +1,8 @@
-[Git] 分支命令
+---
+layout: post
+title:  "[Git] 分支命令"
+categories: [git]
+---
 
 查看分支：`git branch`
 
