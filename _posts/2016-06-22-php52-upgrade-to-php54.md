@@ -4,7 +4,7 @@ title:  "[PHP] 5.2.X升级至5.4.X性能对比"
 categories: [php]
 ---
 
-分别对PHP的5.2.X和5.4.X版本下的的几个常用语句或流程进行压力测试，在同一服务器上得到的运行结果如下
+分别对PHP5.2.X和5.4.X版本的几个常用语句和流程进行压力测试，在同一服务器上得到的运行结果
 
 ```
 --------------------------------------
@@ -47,4 +47,8 @@ Total time:               : 7.982 sec.
 
 ![Alt text](/public/images/apache-traffic.png)
 
-另外Apache版本的升级对http进程对cpu的占用也有不少的提升。总之还是随时关注到使用的到服务的版本更变。
+另外Apache版本的升级对http进程对cpu的占用也有不少的提升。
+
+以下附上PHP的性能测试脚本
+
+[bench-class.php](/public/php/bench-class.php){:target="_blank"}
