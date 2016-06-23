@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[PHP] Session独占"
+title:  "[PHP] 查看php.ini位置"
 categories: [php]
 ---
 
