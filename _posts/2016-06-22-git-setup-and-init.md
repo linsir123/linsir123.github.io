@@ -35,7 +35,7 @@ P.s
 在termail里边输入：`git remote -v`
 可以看到形如一下的返回结果
 
-``
+```
 origin https://github.com/xxx/xxx.git (fetch)
 origin https://github.com/xxx/xxx.git (push)
 ```
