@@ -25,7 +25,7 @@ categories: [git]
 	$ git commit -m "init"
 	```
 
-这样就将本地的项目初始到本地的Git库中。
+	这样就将本地的项目初始到本地的Git库中。
 
 + Git本地库关联到GitLib/Github的版本库
 	```
