@@ -43,9 +43,9 @@ Total time:               : 7.982 sec.
 以下再列举几张线上环境的运行结果图，分别从流量和负载上进行对比
 （在同一时段流量基本一至的情况下，升级到5.4.X版本后的负载基本在1以内，而5.2.X而接近100）。
 
-![Alt text](/public/images/apache-io.png)
+![apache-io](/public/images/apache-io.png)
 
-![Alt text](/public/images/apache-traffic.png)
+![apache-traffic](/public/images/apache-traffic.png)
 
 另外Apache版本的升级对http进程对cpu的占用也有不少的提升。
 
