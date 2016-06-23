@@ -1,8 +1,8 @@
 title: 零星笔记
 description: My Personal Stack Problems
 author: 山沟沟
-github: https://github.com/agusmakmun
-about: 这是放个人简介的地方.
+github: https://github.com/linsir123
+about: php搬运工.
 disqus_shortname: stackproblems
 google_analytics: UA-XXXXXXXX-Y
 
@@ -31,8 +31,8 @@ collections:
 #   fb_appid: 1749788565247320
 
 urls:
-    - text: About Me
-      url: /about/
+    # - text: About Me
+    #   url: /about/
     # - text: Projects
     #   url: /projects/
     # - text: Github
