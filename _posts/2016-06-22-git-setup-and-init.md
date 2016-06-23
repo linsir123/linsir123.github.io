@@ -6,10 +6,10 @@ categories: [git]
 
 + Git客户端安装后，需要对客户端的用户信息做个全局配置
 
-```
-$ git config --global user.name "山沟沟"
-$ git config --global user.email "linsir123@qq.com"
-```
+	```
+	$ git config --global user.name "山沟沟"
+	$ git config --global user.email "linsir123@qq.com"
+	```
 
 + Git本地向GitLib/Github进行代码提交时需要配置SSH key
 	
