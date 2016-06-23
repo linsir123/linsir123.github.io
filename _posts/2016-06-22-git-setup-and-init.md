@@ -26,6 +26,7 @@ $ ssh-keygen -t rsa -C "linsir123@qq.com"
 Git项目初始化
 
 进入某个还没有入库到Git的本地项目目录，并调出Git Bash
+
 ```
 $ git init
 $ git add .
@@ -47,4 +48,5 @@ $ git push origin master
 ----------------------------
 
 参考：
+
 + http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
