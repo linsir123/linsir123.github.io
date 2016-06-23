@@ -15,24 +15,23 @@ $ git config --global user.email "your email"
 
 Git本地向GitLib/Github进行版本提交时可以通过`https`或`ssh`的方式
 
-> P's
 在github.com上建立了一个小项目，可是在每次push的时候，都要输入用户名和密码，很是麻烦。
 原因是使用了https方式push
 在termail里边输入：`git remote -v`
 可以看到形如一下的返回结果
 
->
+``
 origin https://github.com/xxx/xxx.git (fetch)
 origin https://github.com/xxx/xxx.git (push)
+```
 
->
 下面把它换成ssh方式的
+
 ```
 git remote rm origin
 git remote add origin git@github.com:xxx/xxx.git
 git push origin
 ```
-
 
 配置SSH key
 
