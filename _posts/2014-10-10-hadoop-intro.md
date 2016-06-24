@@ -6,7 +6,7 @@ categories: [hadoop]
 
 * Hadoop是什么？
 
-> 一套用于分析大数据的分布式方案由分布式存储Hdfs和并行运算框架MarReduce这两个核心构成。
+> 一套用于分析大数据的分布式方案由分布式存储`Hdfs`和并行运算框架`MarReduce`这两个核心构成。
 
 * Hadoop可以做什么？ 
 
