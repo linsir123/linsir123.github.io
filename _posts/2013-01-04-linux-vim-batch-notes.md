@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Linux] Vim - 批量注释"
+title:  "[Linux] vim - 批量注释"
 categories: [linux]
 ---
 

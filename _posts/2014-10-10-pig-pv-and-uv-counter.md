@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Pig] 站点流量PV和UV的大数据统计"
+title:  "[Hadoop] Pig实现站点流量PV和UV统计"
 categories: [pig, hadoop]
 ---
 
