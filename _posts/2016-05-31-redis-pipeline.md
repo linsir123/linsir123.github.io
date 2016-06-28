@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "[Redis] Pipeline合并读写"
+categories: [redis]
+---
+
+据运维同事关于Redis服务的运维经验来看，Redis在以下的几种情况下将会达到瓶颈：connect到达3k，command到达15k（这里漏掉了具体的服务器配置信息 :(）。
+常用的优化解决方案：
+
+* 在应用层，常用的优化方案比如分流（根据IP或UID进行散列，或选择其它的分布式方案`codis`）
+* 在器硬件层，由于Redis是单线程架构，在CPU上面尽量都选择主频稍微高点的服务器来搭建
+
+
+-----------------------------------------------------
+
+这里展开另一个话题Pipeline，若一个请求中有大量的command，利用合并读写将可以有效的降低请求的执行时间（关于command相互间有依赖没有验证过）。
+
+```
+/// 提交redis请求
+$pipe = $redis->multi(Redis::PIPELINE);
+for ($i = $min; $i <= $max; $i = $i + $step) {
+	$key = sprintf("key_%s", $i);
+	$pipe->hGetAll($key);
+}
+$pipeReply = $pipe->exec();
+
+/// 根据redis pipe返回值组装函数返回值
+if (! empty($pipeReply)) {
+	$index = 0;
+	for ($i = $min; $i <= $max; $i = $i + $step) {
+		$rData = $pipeReply[$index];
+		if (! $rData)
+			$rData = array();
+
+		$list[$i] = $rData;
+	}
+}
+```
