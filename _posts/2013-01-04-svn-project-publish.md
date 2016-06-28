@@ -55,7 +55,6 @@ echo "ok"
 
 其中
 
-* `publish_folder`为本地的SVN仓库代码；
-* `publish_exclude`为rsync过滤同步的文件或文件夹
-* 另该脚本不涉及代码回滚，可以在每次版本发布后将上一个版本打一个Tag用于回滚
-
+* `publish_folder`为存放本地的SVN代码的目录；
+* `publish_exclude`为rsync过滤的文件或文件夹列表；
+* 另该脚本不涉及代码回滚，可以在每次版本发布后将上一个版本打一个Tag用于回滚；
