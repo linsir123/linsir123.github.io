@@ -19,11 +19,11 @@ $ pyleus list -n 192.168.1.70
 $ pyleus -v build pyleus_topology.yaml 
 
 ## 提交任务
-$ pyleus --verbose submit -n 192.168.1.70 flow_statistics.jar
+$ pyleus --verbose submit -n 192.168.1.70 demo.jar
 
 ## 删除任务
-$ pyleus kill -n 192.168.1.70 flow_statistics
+$ pyleus kill -n 192.168.1.70 demo
 
 ## kafka消息订阅（用于查看队列里的消息）
-/usr/local/kafka_2.8.0-0.8.0/bin/kafka-console-consumer.sh --zookeeper 192.168.1.70:2182,192.168.1.73:2182,192.168.1.189:2182 --topic flash_flow
+/usr/local/kafka_2.8.0-0.8.0/bin/kafka-console-consumer.sh --zookeeper 192.168.1.70:2182,192.168.1.73:2182,192.168.1.189:2182 --topic demo
 ```
