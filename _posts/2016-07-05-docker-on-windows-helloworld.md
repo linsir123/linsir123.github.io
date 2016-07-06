@@ -4,6 +4,9 @@ title:  "[Docker] 在Windows下安装测试PHP Hello world"
 categories: [other]
 ---
 
+### 准备
+-----------------------------
+
 首先在官网上查找相关在Windows下的使用方案和使用文档，发现了几个地方有分别介绍到Windows
 
 * [Getting Started with Docker for Windows](https://docs.docker.com/docker-for-windows/){:target="_blank"}
@@ -15,10 +18,10 @@ categories: [other]
 	*Docker for Windows* 需要的环境为`64bit Windows 10 Pro, Enterprise and Education ...`，因为本机为Windows 7版本，所以暂时略掉采用外一种方案。
 
 	*Docker Toolbox* 需有环境为`your machine must have a 64-bit operating system running Windows 7 or higher.`。主要包含了Docker Client, Machine（Oracle VM VirtualBox虚拟机）。
-	
 
+
+### 安装
 -----------------------------
-
 
 安装过程：从官网下载一个安装包，然后一路下一步进行安装直到结束。
 安装完毕后进入安装目录（如：D:\Program Files\Docker Toolbox），在该目录里打开git bash，并执行`start.sh`。
@@ -49,15 +52,16 @@ Server:
 这个过程中Xshell在连接可能会提示“找不到匹配的outgoing encryption算法”，可以在“ssh > 安全设置”把所有的算法都勾选上。
 这样就可以通过Xshell进行操作，在操作性会比上面的git bash来得实用。
 
------------------------------
 
+### 案例
+-----------------------------
 
 制作“PHP内置的Web Server”的镜像并运行
 
 ```
 ####
-$ mkdir helloworld
-$ cd helloworld
+$ mkdir helloworld-php
+$ cd helloworld-php
 
 
 ####
@@ -87,12 +91,18 @@ WORKDIR    /var/www
 ENTRYPOINT ["php", "-S", "0.0.0.0:8080"]
 
 
-####
-$ docker build -t php-helloworld .
+#### 
+#### -t Name and optionally a tag in the 'name:tag' format
+#### 
+$ docker build -t helloworld-php .
 
 
-####
-$ docker run -d -p 8080:8080 php-helloworld
+#### 
+#### -d Run container in background and print container ID
+#### -p Publish a container's port(s) to the host
+#### -p 8080:8080 表示将本地的8080端口绑定到容器的8080端口
+#### 
+$ docker run -d -p 8080:8080 helloworld-php
 ```
 
 上述过程通过Xshell实现。
@@ -106,6 +116,10 @@ Hi this is a test for PHP in Docker.
 docker@default:~/hello$ 
 ```
 
+
+### 其它
+-----------------------------
+
 通过`$ docker ps`可以查看目前运行的容器。通过`$ docker kill`可以将指定容器关闭。
 
 ```
@@ -113,7 +127,7 @@ docker@default:~/hello$ ls
 Dockerfile  index.php
 docker@default:~/hello$ docker ps
 CONTAINER ID        IMAGE               COMMAND                 CREATED             STATUS              PORTS                    NAMES
-b66468250aa6        lxs/hello           "php -S 0.0.0.0:8080"   9 minutes ago       Up 9 minutes        0.0.0.0:8080->8080/tcp   compassionate_stallman
+b66468250aa6        helloworld-php      "php -S 0.0.0.0:8080"   9 minutes ago       Up 9 minutes        0.0.0.0:8080->8080/tcp   compassionate_stallman
 docker@default:~/hello$ docker kill b66468250aa6
 b66468250aa6
 docker@default:~/hello$ docker ps
@@ -121,10 +135,45 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 docker@default:~/hello$
 ```
 
+
+### 延伸
 -----------------------------
 
+安装Mysql容器
 
-参考
+```
+####
+$ mkdir helloworld-mysql
+$ cd helloworld-mysql
+
+
+####
+$ vi Dockerfile
+$ cat Dockerfile
+FROM mysql:5.6
+
+
+####
+$ docker build -t helloworld-mysql .
+
+
+####
+#### -v Bind mount a volume
+#### -e Set environment variables
+#### -i Keep STDIN open even if not attached
+#### -t Allocate a pseudo-TTY
+#### -p 3306:3306 表示将本地的3306端口绑定到容器的3306端口
+#### -v ~/data/mysql:/var/lib/mysql 表示采用挂载的方式持久化MySQL到本地，而不在容器（重启数据将丢失）
+#### -e MYSQL_ROOT_PASSWORD=123456 表示为root帐号初始化密码为123456
+####
+$ docker run -d -p 3306:3306 -v ~/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -it helloworld-mysql
+```
+
+其它服务的镜像安装方法应该也是类似。
+
+
+### 参考
+-----------------------------
 
 * [Xshell显示找不到匹配的outgoing encryption算法](http://www.xshellcn.com/xsh_column/suanfa-bpp.html){:target="_blank"}
 * [DOCKER windows 7 详细安装教程](http://blog.csdn.net/zistxym/article/details/42918339){:target="_blank"}
