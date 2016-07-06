@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "[Sphinx] Sphinx+Scws搜索服务实践"
-categories: [other]
+categories: [default]
 ---
 
-#### Sphinx配置
+### Sphinx配置
+---------------------
 
 ```
 ### 以$前缀的变量为内置变量可以查看手册
@@ -114,10 +115,8 @@ searchd {
 ```
 
 
---------------------------------------------------------
-
-
 #### PHP测试Demo
+---------------------
 
 ```
 <?php
@@ -304,22 +303,18 @@ $o->run();
 ```
 
 
---------------------------------------------------------
+### P's
+---------------------
 
+其它方案`elasticsearch`
 
-#### P's
-
-* 关于一元分词
+一元分词和中文分词的结合
 
 ![cdn-source](/public/images/sphinx-words.png)
 
-* 其它方案`elasticsearch`
 
-
---------------------------------------------------------
-
-
-#### 参考
+### 参考
+---------------------
 
 * [Sphinx+Scws 搭建千万级准实时搜索&应用场景详解](http://www.ttlsa.com/sphinx/sphinx_scws-to-build-tens-of-millions-of-quasi-real-time-search-_-application-scenarios/){:target="_blank"}
 * [Sphinx + PHP + scws构建MySQL准实时分布式全文检索实战](http://www.qixing318.com/article/sphinx-php-scws-build-mysql-quasi-realtime-distributed-fulltext-retrieval-of-actual-combat.html){:target="_blank"}

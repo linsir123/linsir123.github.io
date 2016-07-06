@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Docker] 在Windows下安装测试PHP Hello world"
-categories: [other]
+categories: [default]
 ---
 
 ### 准备

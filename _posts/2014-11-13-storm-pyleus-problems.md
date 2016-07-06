@@ -4,12 +4,15 @@ title:  "[Storm] Pyleus注意事项"
 categories: [storm]
 ---
 
-* 引用python扩展包
+### 引用python扩展包
+-------------------------------
 
-	pyleus实际上是运行了一个虚拟的运行环境，所以如果应用内有包含一些第三方包的话，则需要添加到`requirements.txt`中，否则会出现编译出错提示找不到相应的模块。
-	而项目名称是对应使用pip安装时的名称。如：使用到这个包`http://axiak.github.io/pybloomfiltermmap/index.html#install`，则写到"requirements.txt"的项目名应该是`pybloomfiltermmap`而不是模块名`pybloomfilter`
+pyleus实际上是运行了一个虚拟的运行环境，所以如果应用内有包含一些第三方包的话，则需要添加到`requirements.txt`中，否则会出现编译出错提示找不到相应的模块。
+而项目名称是对应使用pip安装时的名称。如：使用到这个包`http://axiak.github.io/pybloomfiltermmap/index.html#install`，则写到"requirements.txt"的项目名应该是`pybloomfiltermmap`而不是模块名`pybloomfilter`
 
-* 常用命令
+
+### 常用命令
+-------------------------------
 
 ```
 ## 列出服务中运用的任务列表

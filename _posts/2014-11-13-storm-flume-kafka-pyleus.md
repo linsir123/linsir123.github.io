@@ -4,7 +4,8 @@ title:  "[Storm] flume+kafka+storm(pyleus)集成测试"
 categories: [storm]
 ---
 
-#### 概要说明
+### 概要说明
+--------------------------
 
 ![storm-cluster](/public/images/storm-stream.jpeg)
 
@@ -25,13 +26,10 @@ categories: [storm]
 	对分析后的结果持久化，暂定用`mysql`
 
 
+### 服务器配置
 --------------------------
 
-
-#### 服务器配置
-
-
-* `flume`
+#### `flume`
 
 ```
 #agent section
@@ -62,7 +60,7 @@ producer.sinks.r.custom.topic.name=test
 $ bin/flume-ng agent --conf conf --conf-file conf/flume-conf.properties --name producer -Dflume.root.logger=INFO,console
 ```
 
-* `kafka`
+#### `kafka`
 
 ```
 启动命令：
@@ -76,7 +74,7 @@ $ bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-b
 $ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ```
 
-* `pyleus`
+#### `pyleus`
 
 pyleus_topology.yaml（官方example里有一个word_count的案例，将其中的spout调整为kafka源）
 
@@ -101,10 +99,8 @@ topology:
 ```
 
 
+### 参考
 --------------------------
-
-
-#### 参考
 
 + [【Twitter Storm系列】flume-ng+Kafka+Storm+HDFS 实时系统搭建 ](http://blog.csdn.net/weijonathan/article/details/18301321){:target="_blank"}
 + [Flume NG 简介及配置实战](http://blog.csdn.net/weijonathan/article/details/18301321){:target="_blank"}

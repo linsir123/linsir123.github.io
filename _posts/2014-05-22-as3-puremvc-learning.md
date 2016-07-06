@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[AS3] PureMvc学习"
-categories: [other]
+categories: [default]
 ---
 
 pureMVC的几个核心模块（Singleton）
