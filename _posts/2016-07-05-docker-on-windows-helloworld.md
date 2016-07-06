@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Docker] 在Windows下安装测试PHP Hello world"
-categories: [git]
+categories: [other]
 ---
 
 首先在官网上查找相关在Windows下的使用方案和使用文档，发现了几个地方有分别介绍到Windows

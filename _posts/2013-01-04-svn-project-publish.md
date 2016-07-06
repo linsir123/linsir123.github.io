@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[SVN] 项目部署脚本"
-categories: [svn, bash, linux]
+categories: [git, linux]
 ---
 
 以下为一个SVN项目发布脚本，主要涉及的命令有`svn`, `rsync`，另外需要一个邮件发送脚本

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Bash] 多纬数据去重"
-categories: [bash]
+categories: [linux]
 ---
 
 需求：从原日志中提供game_id, user_id, ip，并保证在game_id和user_id一至的情况下只保存一条记录。

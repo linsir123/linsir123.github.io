@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[SVN] 外部引用特性实战"
-categories: [svn]
+categories: [git]
 ---
 
 在SVN中有一个属性叫`svn:externals（外部引用）`，使用这个特性可以用于管理类似`框架代码`和`配置代码`

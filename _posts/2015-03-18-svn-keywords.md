@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[SVN] 自动添加keywords"
-categories: [svn]
+categories: [git]
 ---
 
 经常看一些开源项目的每个文都有一个很统一的注释头，并且会有一行文件的版本信息。

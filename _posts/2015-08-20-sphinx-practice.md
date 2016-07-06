@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Sphinx] Sphinx+Scws搜索服务实践"
-categories: [sphinx]
+categories: [other]
 ---
 
 #### Sphinx配置

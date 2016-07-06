@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[CDN] 回源策略和更新机制"
-categories: [cdn]
+categories: [other]
 ---
 
 ### CDN在项目中比较常见的两个应用场景

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Jekyll] 在Github上搭建自己的静态网站"
-categories: [jekyll]
+categories: [other]
 ---
 
 一直想挂个网站用于整理和沉淀在工作中的项目经验或日常的学习笔记，也试过很多的方法
