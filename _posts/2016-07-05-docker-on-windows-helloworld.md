@@ -94,7 +94,7 @@ ENTRYPOINT ["php", "-S", "0.0.0.0:8080"]
 #### 
 #### -t Name and optionally a tag in the 'name:tag' format
 #### 
-$ docker build -t helloworld-php .
+$ docker build -t helloworld/php .
 
 
 #### 
@@ -102,13 +102,13 @@ $ docker build -t helloworld-php .
 #### -p Publish a container's port(s) to the host
 #### -p 8080:8080 表示将本地的8080端口绑定到容器的8080端口
 #### 
-$ docker run -d -p 8080:8080 helloworld-php
+$ docker run -d -p 8080:8080 helloworld/php
 ```
 
 上述过程通过Xshell实现。
 
 在执行docker run语句时，一直为报错“docker: Error response from daemon: rpc error: code = 2 desc = "oci runtime error: not a directory".”
-在网上查找到的问题原因为“应该是本地映射的目录在container中不存在导致的”。而后查看目录/var/www果真不存在，将其改为/tmp后再执行就可以。
+在网上查找到的问题原因为“应该是本地映射的目录在container中不存在导致的”。也就是/var/www目录在容器内可能不存在，将其改为/tmp后再执行就可以。
 
 ```
 docker@default:~/hello$ curl localhost:8080
@@ -154,7 +154,7 @@ FROM mysql:5.6
 
 
 ####
-$ docker build -t helloworld-mysql .
+$ docker build -t helloworld/mysql .
 
 
 ####
@@ -166,7 +166,7 @@ $ docker build -t helloworld-mysql .
 #### -v ~/data/mysql:/var/lib/mysql 表示采用挂载的方式持久化MySQL到本地，而不在容器（重启数据将丢失）
 #### -e MYSQL_ROOT_PASSWORD=123456 表示为root帐号初始化密码为123456
 ####
-$ docker run -d -p 3306:3306 -v ~/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -it helloworld-mysql
+$ docker run -d -p 3306:3306 -v ~/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -it helloworld/mysql
 ```
 
 其它服务的镜像安装方法应该也是类似。
@@ -179,3 +179,4 @@ $ docker run -d -p 3306:3306 -v ~/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWO
 * [DOCKER windows 7 详细安装教程](http://blog.csdn.net/zistxym/article/details/42918339){:target="_blank"}
 * [Docker在PHP项目开发环境中的应用](http://www.open-open.com/lib/view/open1435671611966.html){:target="_blank"}
 * [什么是Docker?](http://www.docker.org.cn/book/docker/what-is-docker-16.html){:target="_blank"}
+* [http://blog.csdn.net/gsying1474/article/details/51740832](http://blog.csdn.net/gsying1474/article/details/51740832){:target="_blank"}
