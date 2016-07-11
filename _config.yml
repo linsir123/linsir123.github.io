@@ -6,6 +6,8 @@ about: 搬运工. 砌匠. 包工头.
 disqus_shortname: stackproblems
 google_analytics: UA-XXXXXXXX-Y
 
+permalink: /:year/:month/:day/:title.html
+
 enableTags: true
 tagarray: []
 
