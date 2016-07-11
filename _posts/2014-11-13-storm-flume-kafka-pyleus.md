@@ -31,7 +31,7 @@ categories: [storm]
 
 #### `flume`
 
-```
+```conf
 #agent section
 producer.sources = s
 producer.channels = c
@@ -55,22 +55,22 @@ producer.sinks.r.custom.encoding=UTF-8
 producer.sinks.r.custom.topic.name=test
 ```
 
-```
+```bash
 ## 启动命令
 $ bin/flume-ng agent --conf conf --conf-file conf/flume-conf.properties --name producer -Dflume.root.logger=INFO,console
 ```
 
 #### `kafka`
 
-```
-启动命令：
+```bash
+## 启动命令：
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
 $ bin/kafka-server-start.sh config/server.properties
 
-监听命令：
+## 监听命令：
 $ bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
 
-生产命令：
+## 生产命令：
 $ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ```
 
@@ -78,7 +78,7 @@ $ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 
 pyleus_topology.yaml（官方example里有一个word_count的案例，将其中的spout调整为kafka源）
 
-```
+```yaml
 name: word_count
 topology:
     - spout:

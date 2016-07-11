@@ -35,7 +35,7 @@ P's: JobTracker守护进程请求DataNode执行MapReduce作业。
 
 以上服务器节点可以通过以下检测是否正常开启。
 
-```
+```bash
 #### 
 $ jps 
 13896 Jps 

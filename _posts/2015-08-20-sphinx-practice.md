@@ -7,7 +7,7 @@ categories: [default]
 ### Sphinx配置
 ---------------------
 
-```
+```conf
 ### 以$前缀的变量为内置变量可以查看手册
 ### 以@前缀的可能是自定义变量
 ### source、index、indexer、searchd
@@ -118,7 +118,7 @@ searchd {
 #### PHP测试Demo
 ---------------------
 
-```
+```php
 <?php
 /**
  *  SphinxTest

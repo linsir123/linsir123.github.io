@@ -11,7 +11,7 @@ categories: [git]
 在项目的SVN属性中，配置`auto-props`添加`*.php = svn:keywords=Id`，
 这样在新建php文件后并添加下面这个头，在代码提交后`$Id$`这个关键字将被替换成SVN的版本信息。
 
-```
+```php
 <?php
 /**
  * 这里写的是文件的说明

@@ -29,7 +29,7 @@ categories: [default]
 并且在当前所在的git bash环境创建一个ssh连接到虚拟机，这样就可以在该环境中进行docker操作。
 试运行`$ docker version`，可以输出以下内容则表示安装成功，若不成功则可以考虑卸载重新安装。
 
-```
+```bash
 $ docker version
 Client:
  Version:      1.11.2
@@ -58,7 +58,7 @@ Server:
 
 制作“PHP内置的Web Server”的镜像并运行
 
-```
+```bash
 ####
 $ mkdir helloworld-php
 $ cd helloworld-php
@@ -110,7 +110,7 @@ $ docker run -d -p 8080:8080 helloworld/php
 在执行docker run语句时，一直为报错“docker: Error response from daemon: rpc error: code = 2 desc = "oci runtime error: not a directory".”
 在网上查找到的问题原因为“应该是本地映射的目录在container中不存在导致的”。也就是/var/www目录在容器内可能不存在，将其改为/tmp后再执行就可以。
 
-```
+```bash
 docker@default:~/hello$ curl localhost:8080
 Hi this is a test for PHP in Docker. 
 docker@default:~/hello$ 
@@ -122,7 +122,7 @@ docker@default:~/hello$
 
 通过`$ docker ps`可以查看目前运行的容器。通过`$ docker kill`可以将指定容器关闭。
 
-```
+```bash
 docker@default:~/hello$ ls
 Dockerfile  index.php
 docker@default:~/hello$ docker ps
@@ -141,7 +141,7 @@ docker@default:~/hello$
 
 安装Mysql容器
 
-```
+```bash
 ####
 $ mkdir helloworld-mysql
 $ cd helloworld-mysql

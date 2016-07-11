@@ -35,12 +35,13 @@ categories: [default]
 	由源端通过过期header直接管理缓存的过期策略。这点需要跟CDN服务商确认，默认他们的处理机制是由CDN统一控制资源的过期策略（如：js,css一周过期）
 	在跟CDN服务商确认好由源端控制过期策略，就可以在apache/nginx或代码里输出过期头。
 
-```
+```php
+<?php
 /**
  * @param $data
  * @param int $cacheExpire
  */
-protected function _formatData($data, $cacheExpire = 600)
+function _formatData($data, $cacheExpire = 600)
 {
 	///
 	if (!is_array($data)) {

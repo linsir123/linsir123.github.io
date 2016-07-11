@@ -68,10 +68,10 @@ $ git commit -m "init"
 ### 提交项目至GitLib/Github
 -----------------------
 
-```
+```bash
 $ git remote add origin git@xxx.git
 $ git push -u origin master
-// 在版本初始成功后，后续的版本提交只需要
+#### 在版本初始成功后，后续的版本提交只需要
 $ git push origin master
 ```
 

@@ -22,14 +22,14 @@ categories: [golang]
 
 几个常用的Go命令
 
-```
+```bash
 ## 下载和安装某个pkg
 $ go get
 
-编译和安装某个pkg
+## 编译和安装某个pkg
 $ go install
 
-编译某个项目
+## 编译某个项目
 $ go build
 ```
 

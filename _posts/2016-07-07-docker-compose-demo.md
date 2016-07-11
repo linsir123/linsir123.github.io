@@ -16,7 +16,7 @@ categories: [default]
 
 在Windows下通过Docker Toolbox安装的话，有集成了Compose工具。在linux下如果没有安装的话，可以试用以下进行安装。
 
-```
+```bash
 $ curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 $ chmod +x /usr/local/bin/docker-compose
 $ docker-compose version
@@ -32,7 +32,7 @@ OpenSSL version: OpenSSL 1.0.1e 11 Feb 2013
 
 在官网上有提供了很套案例，这里贴一段如果搭建一个Wordpress的过程
 
-```
+```bash
 $ mkdir my_wordpress
 $ cd my-wordpress/
 $ vi docker-compose.yml

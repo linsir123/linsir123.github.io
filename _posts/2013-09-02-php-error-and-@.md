@@ -15,7 +15,7 @@ categories: [php]
 
 * 如果在某个语句上使用了@，则可以将语句内的各种嵌套的脚本可能存在的报错都会被抑制住；
 
-```
+```php
 <?php
 ///
 set_error_handler(array('my_error_handler'), E_ALL);

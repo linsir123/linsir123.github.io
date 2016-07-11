@@ -31,8 +31,8 @@ GOPATH=$GOPATH:/go/lib:/home/A/go
 ```
 
 
-```
-# framework/redis/redis.go
+```golang
+// framework/redis/redis.go
 
 /**
  * 这样在引用第三方项目的时候就只需要写入相对路径
@@ -47,8 +47,8 @@ import (
 ...
 ```
 
-```
-# archiveDistributed/main.go
+```golang
+// archiveDistributed/main.go
 
 /**
  * 在项目内引用其它模块和框架

@@ -23,7 +23,8 @@ connect到达3k，command到达15k（这里漏掉了具体的服务器配置信�
 若一个请求中有大量的command，利用Pipeline进行合并读写将可以有效的降低请求的执行时间
 （关于command相互间有依赖的请求没有验证过是否可行）。
 
-```
+```php
+<?php
 /// 提交redis请求
 $pipe = $redis->multi(Redis::PIPELINE);
 for ($i = $min; $i <= $max; $i = $i + $step) {
