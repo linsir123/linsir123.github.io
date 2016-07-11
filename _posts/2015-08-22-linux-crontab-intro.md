@@ -4,12 +4,14 @@ title:  "[Linux] crontab - 定时任务"
 categories: [linux]
 ---
 
-* 查看所有人的cron
+### 查看所有人的cron
+---------------------------
 
 在`/var/spool/cron`目录中可以查看有配置定时任务的各个帐号。
 
 
-* 各字段定义
+### 各字段定义
+---------------------------
 
 在`/etc/crontab`中有注释各字段的语义。
 
@@ -24,7 +26,8 @@ categories: [linux]
 # *  *  *  *  * user-name command to be executed
 ```
 
-* 基本格式 
+### 基本格式
+---------------------------
 
 ```
 *　　*　　*　　*　　*　　command
@@ -38,7 +41,8 @@ categories: [linux]
 第6列要运行的命令
 ```
 
-* 常见例子
+### 常见例子
+---------------------------
 
 ```bash
 $ 30 21 * * * /usr/local/etc/rc.d/lighttpd restart
@@ -69,6 +73,7 @@ $ 0 4 1 jan * /usr/local/etc/rc.d/lighttpd restart
 # 一月一号的4点重启apache
 ```
 
-* 参考
+### 参考
+---------------------------
 
 + [http://blog.csdn.net/ethanzhao/article/details/4406017](http://blog.csdn.net/ethanzhao/article/details/4406017){:target="_blank"}
