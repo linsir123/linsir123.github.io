@@ -114,15 +114,26 @@ Java home: /usr/lib/jvm/jre
 
 * 数据采集/加工
 * 数据分析统计（聚合语句）
-  
-  - [ [Elasticsearch] 聚合 - 时间数据处理(Looking at Time)](http://blog.csdn.net/dm_vincent/article/details/42594043){:target="_blank"}
+
+  - [[Elasticsearch] 聚合 - 时间数据处理(Looking at Time)](http://blog.csdn.net/dm_vincent/article/details/42594043){:target="_blank"}
+  - [Aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html){:target="_blank"}
 
 * 绘制报表
+
+  - [Kibana4](http://kibana.logstash.es/content/kibana/v4/){:target="_blank"}
+
+```
+在生产过程中可以使用es用于计量类型的数据统计（不适用于留存、新增等统计），并且只保留周期性的原始日志。
+
+* 对于历史数据，可以通过es的聚合接口将统计数据周期性的落地到mysql，再由自己开发的管理后台进行数据报表展现；
+* 使用kibana类似于实时监控对数据进行实时的报表展现；
+```
 
 
 ### 参考
 -----------------------------
 
-* [elasticsearch中的API](http://www.cnblogs.com/yjf512/p/4862992.html){:target="_blank"}
 * [五类Elasticsearch扩展性插件推荐](http://cloud.51cto.com/art/201505/476450.htm){:target="_blank"}
-* [ Elasticsearch安装中文分词插件ik](http://blog.csdn.net/liuzhenfeng/article/details/39404435){:target="_blank"}
+* [Elasticsearch安装中文分词插件ik](http://blog.csdn.net/liuzhenfeng/article/details/39404435){:target="_blank"}
+* [[Elasticsearch] Elasticsearch权威指南翻译目录](http://blog.csdn.net/dm_vincent/article/details/46994535){:target="_blank"}
+* [elasticsearch中的API](http://www.cnblogs.com/yjf512/p/4862992.html){:target="_blank"}
