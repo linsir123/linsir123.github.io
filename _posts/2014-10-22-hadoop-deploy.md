@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Hadoop] 服务器部署"
-categories: [hadoop]
+categories: [staticstics]
 ---
 
 ### 主进程

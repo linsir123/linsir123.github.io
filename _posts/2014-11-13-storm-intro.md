@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Storm] 入门概念"
-categories: [storm]
+categories: [staticstics]
 ---
 
 ### 服务器节点

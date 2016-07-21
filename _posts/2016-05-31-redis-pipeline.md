@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Redis] Pipeline合并读写"
-categories: [redis]
+categories: [default]
 ---
 
 ### 瓶颈

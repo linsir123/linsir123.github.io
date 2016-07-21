@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Elasticsearch] 安装和插件"
-categories: [default]
+categories: [staticstics]
 ---
 
 ### Elasticsearch

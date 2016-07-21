@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Hadoop] Pig实现站点流量PV和UV统计"
-categories: [hadoop]
+categories: [staticstics]
 ---
 
 通过Nginx采集流量统计相关日志，然后通过Bash工具将日志加工成Pig默认的格式（字段用tab分隔）并将日志导入到hdfs中，

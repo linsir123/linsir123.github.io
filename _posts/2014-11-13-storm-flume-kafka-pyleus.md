@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Storm] flume+kafka+storm(pyleus)集成测试"
-categories: [storm]
+categories: [staticstics]
 ---
 
 ### 概要说明

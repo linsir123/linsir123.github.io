@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Storm] Pyleus注意事项"
-categories: [storm]
+categories: [staticstics]
 ---
 
 ### 引用python扩展包

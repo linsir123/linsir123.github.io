@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Hadoop] 入门概念"
-categories: [hadoop]
+categories: [staticstics]
 ---
 
 ### Hadoop是什么？
