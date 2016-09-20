@@ -306,11 +306,15 @@ $o->run();
 ### P's
 ---------------------
 
-其它方案`elasticsearch`
++ 一元分词和中文分词的结合
 
-一元分词和中文分词的结合
+	![cdn-source](/public/images/sphinx-words.png)
 
-![cdn-source](/public/images/sphinx-words.png)
++ 拼音搜索实现
+
+	在数据库表中针对`title`字段`冗余`出两个字段分别用于存储对应的全拼和首字拼
+	（[中文拼音转换工具](https://github.com/overtrue/pinyin){:target="_blank"}），
+	并将这两个字段构造到Sphinx的索引中，最后在搜索接口中使用上这两个字段即可。
 
 
 ### 参考
