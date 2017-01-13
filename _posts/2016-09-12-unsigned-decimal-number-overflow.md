@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[杂记] int溢出"
+title:  "[杂记] 整形Int32位溢出"
 categories: [default]
 ---
 
