@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[杂记] PHP后端开发周期事项总结"
-categories: [default]
+title:  "[PHP] 后端开发周期事项总结"
+categories: [php]
 ---
 
 ### API

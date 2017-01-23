@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[杂记] 整形Int32位溢出"
-categories: [default]
+title:  "[PHP] 整形Int32位溢出"
+categories: [php]
 ---
 
 ### 背景
