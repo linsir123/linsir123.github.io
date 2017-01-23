@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[前端] 开发技术栈"
-categories: [default]
+categories: [front]
 ---
 
 ### Node.js, Npm

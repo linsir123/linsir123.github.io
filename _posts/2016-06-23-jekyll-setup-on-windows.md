@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Jekyll] Windows本地环境安装"
-categories: [default]
+categories: [tools]
 ---
 
 Jekyll是一个用于构造静态化网站的工具或框架。可以按照Jekyll的目录结构提交到`Github pages`，自动生成对应的静态网站。

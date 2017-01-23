@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Jekyll] 在Github上搭建自己的静态网站"
-categories: [default]
+categories: [tools]
 ---
 
 ### 之前

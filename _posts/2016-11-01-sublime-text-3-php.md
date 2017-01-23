@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[PHP] Sublime Text 3下php开发工具搭建"
-categories: [php]
+title:  "[Sublime] Sublime Text 3下php插件使用"
+categories: [tools]
 ---
 
 ### PHP Companion

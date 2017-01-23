@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[AS3] PureMVC学习"
-categories: [default]
+categories: [front]
 ---
 
 ### 核心

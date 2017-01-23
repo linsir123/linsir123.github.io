@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[前端] VueJS的mvvm模式体验"
-categories: [default]
+categories: [front]
 ---
 
 ### 需求分析
