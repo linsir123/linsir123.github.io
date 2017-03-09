@@ -1,0 +1,115 @@
+*{
+	font-family: Consolas,"lucida Grande",Verdana,"Microsoft YaHei";
+}
+body{
+	width: 55em;
+	margin-top: 10px;
+	margin-right: 450px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+}
+code{
+	color: #c7254e;
+	background-color: #f9f2f4;
+	border-radius: 4px;
+}
+tspan{
+	font-size: 12px;
+}
+.markdown-body{
+	line-height: 1.5;
+}
+.markdown-body p{
+	font-size: 14px;
+}
+.markdown-body li{
+	font-size: 14px;
+}
+.markdown-body li>p{
+	margin: 10px 0;
+}
+.markdown-body .codehilite pre, .markdown-body pre{
+	font-size: 12px;
+}
+
+
+/**/
+.markdown-body h1{
+	color: #009193;
+	border-bottom: none;
+}
+.markdown-body h2{
+	color: #009193;
+	border-bottom: 1px solid #009193;
+	font-size: 24px;
+}
+.markdown-body h3, .markdown-body h4, .markdown-body h5{
+	color: #6C8C37;
+	font-size: 20px;
+}
+.markdown-body h4{
+	font-size: 18px;
+}
+
+
+/**/
+.task-list-item{
+	font-size: 14px;
+}
+.task-list-item p{
+	margin-bottom: 4px;
+}
+
+
+/* Toc */
+div.toc{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+}
+div.toc b{
+	border-bottom: 1px solid #EDF3DE;
+	display: block;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+div.toc li{
+	line-height: 1.5;
+}
+div.toc ul{
+	padding-left: 1.1em;
+}
+div.toc a{
+	font-size: 14px;
+	color: #6C8C37;
+}
+div.toc a:hover{
+	text-decoration: none;
+	color: #009193;
+}
+
+
+/* zTree*/
+div.zTreeDiv{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	min-width: 400px;
+	max-width: 400px;
+	overflow: hidden;
+}
+div.zTreeDiv li{
+	line-height: 1.5;
+}
+div.zTreeDiv b{
+	border-bottom: 1px solid #EDF3DE;
+	display: block;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
