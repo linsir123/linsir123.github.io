@@ -146,8 +146,8 @@ div.zTreeDiv b {
 .actor rect {
     rx: 5;
     ry: 5;
-    stroke: rgb(19, 84, 12);
-    fill: rgb(205, 228, 152);
+    stroke: #CCCCFF;
+    fill: #ECECFF;
 }
 
 .signal line {
@@ -155,14 +155,14 @@ div.zTreeDiv b {
 }
 
 .uml-flowchart rect {
-    stroke: rgb(19, 84, 12);
-    fill: rgb(205, 228, 152);
+    stroke: #CCCCFF;
+    fill: #ECECFF;
     stroke-width: 2;
 }
 
 .uml-flowchart path.flowchart {
-    stroke: rgb(19, 84, 12);
-    fill: rgb(205, 228, 152);
+    stroke: #CCCCFF;
+    fill: #ECECFF;
 }
 
 .uml-flowchart path,
