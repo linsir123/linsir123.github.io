@@ -150,8 +150,12 @@ div.zTreeDiv b {
     fill: #ECECFF;
 }
 
-.signal line {
-    stroke: rgb(51, 51, 51);
+.uml-sequence-diagram line {
+    stroke: #ccc;
+}
+
+.uml-sequence-diagram .signal line {
+    stroke: #333;
 }
 
 .uml-flowchart rect {
