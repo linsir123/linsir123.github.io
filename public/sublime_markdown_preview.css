@@ -150,12 +150,20 @@ div.zTreeDiv b {
     fill: #ECECFF;
 }
 
+.uml-sequence-diagram,
+.uml-flowchart {
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
 .uml-sequence-diagram line {
     stroke: #ccc;
 }
 
 .uml-sequence-diagram .signal line {
-    stroke: #333;
+    stroke: #666;
 }
 
 .uml-flowchart rect {
