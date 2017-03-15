@@ -152,10 +152,10 @@ div.zTreeDiv b {
 
 .uml-sequence-diagram,
 .uml-flowchart {
-    border: 1px solid #ccc;
     padding: 5px 15px;
     border-radius: 3px;
     margin: 5px 0;
+    background: #f7f7f7;
 }
 
 .uml-sequence-diagram line {
