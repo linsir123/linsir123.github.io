@@ -166,6 +166,11 @@ div.zTreeDiv b {
     stroke: #666;
 }
 
+.uml-sequence-diagram .signal line:last-child[style] {
+    stroke: #666;
+    marker-end: url(#raphael-marker-endblock33) !important;
+}
+
 .uml-flowchart rect {
     stroke: #CCCCFF;
     fill: #ECECFF;
