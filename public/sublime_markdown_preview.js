@@ -1,30 +1,127 @@
+/**
+ * UML
+ * 
+ * @param  {[type]}
+ * @param  {[type]}
+ * @return {[type]}
+ */
+(function(win, doc) {
+    /**
+     * 格式化关键字
+     */
+    function InitSvg() {
+        $(".uml-flowchart").addClass("codehilite");
+        $("svg tspan").each(function() {
+            var txt = $(this).text();
+            txt = $.trim(txt);
+            if (txt == "") {
+                return;
+            }
+
+            //
+            var re = /(\`[^\`]+\`)/ig;
+            if (re.test(txt)) {
+                txt = txt.replace(re, "<tspan class='s1'>$1</tspan>");
+                $(this).html(txt);
+                // console.log(txt);
+            }
+        });
+    }
+
+    function onReady(fn) {
+        if (doc.addEventListener) {
+            doc.addEventListener('DOMContentLoaded', fn);
+        } else {
+            doc.attachEvent('onreadystatechange', function() {
+                if (doc.readyState === 'interactive')
+                    fn();
+            });
+        }
+    }
+
+    win.convertUML = function(className, converter, settings) {
+        var charts = doc.querySelectorAll("pre." + className),
+            arr = [],
+            i, j, maxItem, diagaram, text, curNode;
+
+        // Is there a settings object?
+        if (settings === void 0) {
+            settings = {};
+        }
+
+        // Make sure we are dealing with an array
+        for (i = 0, maxItem = charts.length; i < maxItem; i++) arr.push(charts[i])
+
+        // Find the UML source element and get the text
+        for (i = 0, maxItem = arr.length; i < maxItem; i++) {
+            childEl = arr[i].firstChild;
+            parentEl = childEl.parentNode;
+            text = "";
+            for (j = 0; j < childEl.childNodes.length; j++) {
+                curNode = childEl.childNodes[j];
+                whitespace = /^\s*$/;
+                if (curNode.nodeName === "#text" && !(whitespace.test(curNode.nodeValue))) {
+                    text = curNode.nodeValue;
+                    break;
+                }
+            }
+
+            // Do UML conversion and replace source
+            el = doc.createElement('div');
+            el.className = className;
+            parentEl.parentNode.insertBefore(el, parentEl);
+            parentEl.parentNode.removeChild(parentEl);
+            diagram = converter.parse(text);
+            diagram.drawSVG(el, settings);
+        }
+    }
+
+    onReady(function() {
+        convertUML('uml-flowchart', flowchart);
+        InitSvg();
+    });
+
+    onReady(function() {
+        convertUML('uml-sequence-diagram', Diagram, { theme: 'simple' });
+        InitSvg();
+    });
+})(window, document);
+
+/**
+ * @param  {Array}
+ * @return {[type]}
+ */
 $(document).ready(function() {
     // 
     var zNodes = [];
-    var toc = $("div.toc");
-    toc.prepend("<b>文章目录</b>");
 
-    // 
-    TocPretty(null, "", 0, 0);
+    InitToc();
 
-    TitlePretty(1, null, "");
+    /**
+     * 初始化`段落`标题以及`目录`标题
+     */
+    function InitToc() {
+        // 
+        TocPretty(null, "", 0, 0);
 
-    //
-    // console.log(zNodes);
-    var zSetting = {
-        data: {
-            simpleData: {
-                enable: true
+        TitlePretty(1, null, "");
+
+        //
+        // console.log(zNodes);
+        var zSetting = {
+            data: {
+                simpleData: {
+                    enable: true
+                }
             }
-        }
-    };
+        };
 
-    $("div.toc")
-        .empty().prepend("<b>文章目录</b>")
-        .removeClass("toc").addClass("zTreeDiv")
-        .append("<ul id='myZTree' class='ztree'>");
-    $.fn.zTree.init($("#myZTree"), zSetting, zNodes);
-
+        $("div.toc")
+            .empty().prepend("<b>文章目录</b>")
+            .removeClass("toc").addClass("zTreeDiv")
+            .append("<ul id='myZTree' class='ztree'>");
+        $.fn.zTree.init($("#myZTree"), zSetting, zNodes);
+    }
 
     /**
      * 格式化段落标题
@@ -103,57 +200,3 @@ $(document).ready(function() {
         });
     }
 });
-
-// uml
-(function(win, doc) {
-    function onReady(fn) {
-        if (doc.addEventListener) {
-            doc.addEventListener('DOMContentLoaded', fn);
-        } else {
-            doc.attachEvent('onreadystatechange', function() {
-                if (doc.readyState === 'interactive')
-                    fn();
-            });
-        }
-    }
-
-    win.convertUML = function(className, converter, settings) {
-        var charts = doc.querySelectorAll("pre." + className),
-            arr = [],
-            i, j, maxItem, diagaram, text, curNode;
-
-        // Is there a settings object?
-        if (settings === void 0) {
-            settings = {};
-        }
-
-        // Make sure we are dealing with an array
-        for (i = 0, maxItem = charts.length; i < maxItem; i++) arr.push(charts[i])
-
-        // Find the UML source element and get the text
-        for (i = 0, maxItem = arr.length; i < maxItem; i++) {
-            childEl = arr[i].firstChild;
-            parentEl = childEl.parentNode;
-            text = "";
-            for (j = 0; j < childEl.childNodes.length; j++) {
-                curNode = childEl.childNodes[j];
-                whitespace = /^\s*$/;
-                if (curNode.nodeName === "#text" && !(whitespace.test(curNode.nodeValue))) {
-                    text = curNode.nodeValue;
-                    break;
-                }
-            }
-
-            // Do UML conversion and replace source
-            el = doc.createElement('div');
-            el.className = className;
-            parentEl.parentNode.insertBefore(el, parentEl);
-            parentEl.parentNode.removeChild(parentEl);
-            diagram = converter.parse(text);
-            diagram.drawSVG(el, settings);
-        }
-    }
-
-    onReady(function() { convertUML('uml-flowchart', flowchart); });
-    onReady(function() { convertUML('uml-sequence-diagram', Diagram, { theme: 'simple' }); });
-})(window, document)

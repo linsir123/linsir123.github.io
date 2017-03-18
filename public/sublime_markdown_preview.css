@@ -186,3 +186,7 @@ div.zTreeDiv b {
 .uml-flowchart rect {
     stroke-width: 2;
 }
+
+tspan.s1 {
+    fill: #0086b3;
+}
