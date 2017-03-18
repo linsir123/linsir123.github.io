@@ -6,11 +6,13 @@
  * @return {[type]}
  */
 (function(win, doc) {
+    //
+    setTimeout(InitSvg, 1000);
+
     /**
      * 格式化关键字
      */
     function InitSvg() {
-        $(".uml-flowchart").addClass("codehilite");
         $("svg tspan").each(function() {
             var txt = $(this).text();
             txt = $.trim(txt);
@@ -77,13 +79,14 @@
     }
 
     onReady(function() {
-        convertUML('uml-flowchart', flowchart);
-        InitSvg();
+        convertUML('uml-flowchart', flowchart, {
+            'yes-text': '是',
+            'no-text': '否'
+        });
     });
 
     onReady(function() {
         convertUML('uml-sequence-diagram', Diagram, { theme: 'simple' });
-        InitSvg();
     });
 })(window, document);
 
