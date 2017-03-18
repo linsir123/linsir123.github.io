@@ -19,7 +19,7 @@
             }
 
             //
-            var re = /(\`[^\`]+\`)/ig;
+            var re = /\`([^\`]+)\`/ig;
             if (re.test(txt)) {
                 txt = txt.replace(re, "<tspan class='s1'>$1</tspan>");
                 $(this).html(txt);
