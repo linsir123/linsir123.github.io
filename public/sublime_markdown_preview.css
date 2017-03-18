@@ -172,8 +172,8 @@ div.zTreeDiv b {
 }
 
 .uml-flowchart rect {
-    stroke: #CCCCFF;
-    fill: #ECECFF;
+    stroke: #ccc;
+    fill: #f7f7f7;
     stroke-width: 2;
 }
 
