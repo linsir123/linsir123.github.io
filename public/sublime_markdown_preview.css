@@ -1,7 +1,6 @@
 ﻿* {
     font-family: Consolas, "lucida Grande", Verdana, "Microsoft YaHei";
 }
-
 body {
     width: 55em;
     margin-top: 10px;
@@ -9,38 +8,30 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 code {
     color: #c7254e;
     background-color: #f9f2f4;
     border-radius: 4px;
 }
-
 tspan {
     font-size: 12px;
 }
-
 .markdown-body {
     line-height: 1.5;
 }
-
 .markdown-body p {
     font-size: 14px;
 }
-
 .markdown-body li {
     font-size: 14px;
 }
-
 .markdown-body li>p {
     margin: 10px 0;
 }
-
 .markdown-body .codehilite pre,
 .markdown-body pre {
     font-size: 12px;
 }
-
 
 /**/
 
@@ -48,35 +39,29 @@ tspan {
     color: #009193;
     border-bottom: none;
 }
-
 .markdown-body h2 {
     color: #009193;
     border-bottom: 1px solid #009193;
     font-size: 24px;
 }
-
 .markdown-body h3,
 .markdown-body h4,
 .markdown-body h5 {
     color: #6C8C37;
     font-size: 20px;
 }
-
 .markdown-body h4 {
     font-size: 18px;
 }
-
 
 /**/
 
 .task-list-item {
     font-size: 14px;
 }
-
 .task-list-item p {
     margin-bottom: 4px;
 }
-
 
 /* Toc */
 
@@ -88,32 +73,26 @@ div.toc {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 div.toc b {
     border-bottom: 1px solid #EDF3DE;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
-
 div.toc li {
     line-height: 1.5;
 }
-
 div.toc ul {
     padding-left: 1.1em;
 }
-
 div.toc a {
     font-size: 14px;
     color: #6C8C37;
 }
-
 div.toc a:hover {
     text-decoration: none;
     color: #009193;
 }
-
 
 /* zTree*/
 
@@ -128,18 +107,15 @@ div.zTreeDiv {
     max-width: 400px;
     overflow: hidden;
 }
-
 div.zTreeDiv li {
     line-height: 1.5;
 }
-
 div.zTreeDiv b {
     border-bottom: 1px solid #EDF3DE;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
-
 
 /* svg */
 
@@ -149,7 +125,6 @@ div.zTreeDiv b {
     stroke: #CCCCFF;
     fill: #ECECFF;
 }
-
 .uml-sequence-diagram,
 .uml-flowchart {
     padding: 5px 15px;
@@ -157,38 +132,25 @@ div.zTreeDiv b {
     margin: 5px 0;
     background: #f7f7f7;
 }
-
 .uml-sequence-diagram line {
     stroke: #ccc;
 }
-
 .uml-sequence-diagram .signal line {
     stroke: #666;
 }
-
-
-/*.uml-sequence-diagram .signal line:last-child[style] {
-    stroke: #666;
-    marker-end: url(#raphael-marker-endblock33) !important;
-}
-*/
-
 .uml-flowchart rect {
     stroke: #ccc;
     fill: #eee;
     stroke-width: 2;
 }
-
 .uml-flowchart path.flowchart {
     stroke: #CCCCFF;
     fill: #ECECFF;
 }
-
 .uml-flowchart path,
 .uml-flowchart rect {
     stroke-width: 2;
 }
-
 svg tspan.gd {
     fill: #0086b3;
     font-weight: bold;
