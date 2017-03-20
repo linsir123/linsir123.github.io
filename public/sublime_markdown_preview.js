@@ -107,7 +107,7 @@ $(document).ready(function() {
         //
         var re = /\`([^\`]+)\`/ig;
         if (re.test(txt)) {
-            txt = txt.replace(re, "<tspan class='s2'>$1</tspan>");
+            txt = txt.replace(re, "<tspan class='gd'>$1</tspan>");
             $(Jdom).html(txt);
             // console.log(txt);
         }
