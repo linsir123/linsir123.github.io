@@ -6,30 +6,6 @@
  * @return {[type]}
  */
 (function(win, doc) {
-    //
-    setTimeout(InitSvg, 1000);
-
-    /**
-     * 格式化关键字
-     */
-    function InitSvg() {
-        $("svg tspan").each(function() {
-            var txt = $(this).text();
-            txt = $.trim(txt);
-            if (txt == "") {
-                return;
-            }
-
-            //
-            var re = /\`([^\`]+)\`/ig;
-            if (re.test(txt)) {
-                txt = txt.replace(re, "<tspan class='s1'>$1</tspan>");
-                $(this).html(txt);
-                // console.log(txt);
-            }
-        });
-    }
-
     function onReady(fn) {
         if (doc.addEventListener) {
             doc.addEventListener('DOMContentLoaded', fn);
@@ -90,6 +66,7 @@
     });
 })(window, document);
 
+
 /**
  * @param  {Array}
  * @return {[type]}
@@ -99,6 +76,42 @@ $(document).ready(function() {
     var zNodes = [];
 
     InitToc();
+
+    //
+    setTimeout(InitKeywords, 1000);
+
+    /**
+     * 格式化关键字
+     */
+    function InitKeywords() {
+        $("svg tspan").each(function() {
+            FormatKeywords(this)
+        });
+
+        $("div.codehilite pre").each(function() {
+            FormatKeywords(this)
+        });
+    }
+
+    /**
+     * [FormatKeywords description]
+     * @param {[type]} Jdom [description]
+     */
+    function FormatKeywords(Jdom) {
+        var txt = $(Jdom).text();
+        txt = $.trim(txt);
+        if (txt == "") {
+            return;
+        }
+
+        //
+        var re = /\`([^\`]+)\`/ig;
+        if (re.test(txt)) {
+            txt = txt.replace(re, "<tspan class='s2'>$1</tspan>");
+            $(Jdom).html(txt);
+            // console.log(txt);
+        }
+    }
 
     /**
      * 初始化`段落`标题以及`目录`标题
