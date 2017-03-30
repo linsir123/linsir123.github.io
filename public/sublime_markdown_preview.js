@@ -78,7 +78,12 @@ $(document).ready(function() {
     InitToc();
 
     //
-    setTimeout(InitKeywords, 1000);
+    if ($(".uml-sequence-diagram").length > 0 || $(".uml-flowchart").length > 0) {
+        setTimeout(InitKeywords, 1000);
+    } else {
+        InitKeywords();
+    }
+
 
     /**
      * 格式化关键字

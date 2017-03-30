@@ -13,15 +13,10 @@ code {
     background-color: #f9f2f4;
     border-radius: 4px;
 }
-tspan {
-    font-size: 12px;
-}
 .markdown-body {
     line-height: 1.5;
 }
-.markdown-body p {
-    font-size: 14px;
-}
+.markdown-body p,
 .markdown-body li {
     font-size: 14px;
 }
@@ -29,11 +24,12 @@ tspan {
     margin: 10px 0;
 }
 .markdown-body .codehilite pre,
-.markdown-body pre {
+.markdown-body pre,
+tspan {
     font-size: 12px;
 }
 
-/**/
+/* H title*/
 
 .markdown-body h1 {
     color: #009193;
@@ -54,7 +50,7 @@ tspan {
     font-size: 18px;
 }
 
-/**/
+/* Task */
 
 .task-list-item {
     font-size: 14px;
@@ -117,7 +113,7 @@ div.zTreeDiv b {
     margin-bottom: 10px;
 }
 
-/* svg */
+/* SVG */
 
 .actor rect {
     rx: 5;
