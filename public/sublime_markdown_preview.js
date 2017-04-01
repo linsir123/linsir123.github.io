@@ -205,7 +205,7 @@ $(document).ready(function() {
             var zName = $(" > a", this).text();
             var zUrl = $(" > a", this).attr("href");
             var zParent = pId == 0 ? 1 : 0;
-            var zOpen = level < 2 ? 1 : 0;
+            var zOpen = level < 1 ? 1 : 0;
             zNodes.push({
                 id: zId,
                 pId: pId,
