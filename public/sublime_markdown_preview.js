@@ -78,11 +78,12 @@ $(document).ready(function() {
     InitToc();
 
     //
-    if ($(".uml-sequence-diagram").length > 0 || $(".uml-flowchart").length > 0) {
-        setTimeout(InitKeywords, 1000);
-    } else {
-        InitKeywords();
-    }
+    // if ($(".uml-sequence-diagram").length > 0 || $(".uml-flowchart").length > 0) {
+    //     setTimeout(InitKeywords, 1000);
+    // } else {
+    //     InitKeywords();
+    // }
+    InitKeywords();
 
 
     /**
@@ -96,26 +97,6 @@ $(document).ready(function() {
         $("div.codehilite pre").each(function() {
             FormatKeywords(this)
         });
-    }
-
-    /**
-     * [FormatKeywords description]
-     * @param {[type]} Jdom [description]
-     */
-    function FormatKeywords(Jdom) {
-        var txt = $(Jdom).text();
-        txt = $.trim(txt);
-        if (txt == "") {
-            return;
-        }
-
-        //
-        var re = /\`([^\`]+)\`/ig;
-        if (re.test(txt)) {
-            txt = txt.replace(re, "<tspan class='gd'>$1</tspan>");
-            $(Jdom).html(txt);
-            // console.log(txt);
-        }
     }
 
     /**
@@ -219,5 +200,25 @@ $(document).ready(function() {
             //
             TocPretty(myList, myText, zId, level + 1);
         });
+    }
+
+    /**
+     * [FormatKeywords description]
+     * @param {[type]} Jdom [description]
+     */
+    function FormatKeywords(Jdom) {
+        var txt = $(Jdom).text();
+        txt = $.trim(txt);
+        if (txt == "") {
+            return;
+        }
+
+        //
+        var re = /\`([^\`]+)\`/ig;
+        if (re.test(txt)) {
+            txt = txt.replace(re, "<tspan class='gd'>$1</tspan>");
+            $(Jdom).html(txt);
+            // console.log(txt);
+        }
     }
 });
