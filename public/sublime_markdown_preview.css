@@ -115,12 +115,6 @@ div.zTreeDiv b {
 
 /* SVG */
 
-.actor rect {
-    rx: 5;
-    ry: 5;
-    stroke: #CCCCFF;
-    fill: #ECECFF;
-}
 .uml-sequence-diagram,
 .uml-flowchart {
     padding: 5px 15px;
@@ -128,12 +122,28 @@ div.zTreeDiv b {
     margin: 5px 0;
     background: #f7f7f7;
 }
+svg tspan.gd {
+    fill: #0086b3;
+    font-weight: bold;
+}
+
+/* diagram */
+
+.actor rect {
+    rx: 5;
+    ry: 5;
+    stroke: #CCCCFF;
+    fill: #ECECFF;
+}
 .uml-sequence-diagram line {
-    stroke: #ccc;
+    stroke: #c1c1cc;
 }
 .uml-sequence-diagram .signal line {
-    stroke: #666;
+    stroke: #a2a2d6;
 }
+
+/* flowchart */
+
 .uml-flowchart rect {
     stroke: #ccc;
     fill: #eee;
@@ -146,8 +156,4 @@ div.zTreeDiv b {
 .uml-flowchart path,
 .uml-flowchart rect {
     stroke-width: 2;
-}
-svg tspan.gd {
-    fill: #0086b3;
-    font-weight: bold;
 }
