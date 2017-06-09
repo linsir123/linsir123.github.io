@@ -58,6 +58,10 @@ tspan {
 .task-list-item p {
     margin-bottom: 4px;
 }
+.task-list-item ul>li {
+    font-size: 12px;
+    line-height: 22px;
+}
 
 /* Toc */
 
@@ -156,4 +160,10 @@ svg tspan.gd {
 .uml-flowchart path,
 .uml-flowchart rect {
     stroke-width: 2;
+}
+
+
+.markdown-body table th,
+.markdown-body table td {
+    font-size: 12px;
 }
